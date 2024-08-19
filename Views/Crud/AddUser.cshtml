@@ -1,0 +1,30 @@
+@using MVCApp.Domain.Entities
+@model User
+
+<form asp-controller="Crud" method="post" asp-action="AddUser" class="card align-self-center" style="width: 22rem;">
+    <div class="card-header">
+        Agregar datos de usuario
+    </div>
+    <div class="list-group list-group-flush p-1">
+        <div class="form-floating mb-1">
+            <input asp-for="@Model.Username" type="text" class="form-control" id="username" placeholder="usuarioprueba">
+            <label for="Username">Email</label>
+        </div>
+        <span class="text-danger ms-2" asp-validation-for="Username"></span>
+        <div class="form-floating mb-1">
+            <input asp-for="@Model.Email" type="email" class="form-control" id="email" placeholder="example@gmail.com">
+            <label for="Email">Email</label>
+        </div>
+        <select asp-for="Career" class="form-select" aria-label="Default select example">
+            <option selected>Seleccione una opcion</option>
+            <option value="Ingeniería en sistemas computacionales">Ingeniería en sistemas computacionales</option>
+            <option value="Ingeniería industrial">Ingeniería industrial</option>
+            <option value="Psicología">Psicología</option>
+            <option value="Ingeniería en mantenimiento industrial">Ingeniería en mantenimiento industrial</option>
+        </select>
+        @* <div class="text-danger" asp-validation-summary="All"></label> *@
+        </div>
+        <div class="card-footer d-flex justify-content-end">
+            <input type="submit" class="btn btn-outline-success" value="Agregar">
+        </div>
+</form>
