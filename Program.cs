@@ -1,7 +1,13 @@
+using Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddServerSideBlazor(); //< -------- Configuracion agregada para los componentes blazor
+
+// builder.Services.AddSingleton<TestDataService>;
 
 var app = builder.Build();
 
@@ -19,6 +25,8 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+
+app.MapBlazorHub(); // <--------- Mapear los componentes blazor
 
 app.MapControllerRoute(
     name: "default",

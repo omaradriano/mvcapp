@@ -18,6 +18,18 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\adriana\dev\MVCApp
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/adriana/dev/MVCApp/Components/OtherComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xPdGhlckNvbXBvbmVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adriana/dev/MVCApp/Components/TestComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xUZXN0Q29tcG9uZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adriana/dev/MVCApp/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/adriana/dev/MVCApp/Views/Crud/AddUser.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3J1ZFxBZGRVc2VyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -32,6 +44,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/adriana/dev/MVCApp/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adriana/dev/MVCApp/Views/Pkmn/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGttblxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/adriana/dev/MVCApp/Views/Shared/Error.cshtml]

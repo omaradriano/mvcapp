@@ -8,7 +8,7 @@ namespace MVCApp.Controllers
     {
         public IActionResult Index()
         {
-            var data = UserRepository.GetUsers();
+            var data = UsersJSONRepository.GetUsers();
             return View(data);
         }
 
@@ -34,7 +34,7 @@ namespace MVCApp.Controllers
         [HttpPost]
         public IActionResult DeleteUser(int id)
         {
-            UserRepository.DeleteUser(id);
+            UsersJSONRepository.DeleteUser(id);
             return RedirectToAction(nameof(Index));
         }
     }

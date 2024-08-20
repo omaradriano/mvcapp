@@ -28,3 +28,8 @@ C:\Users\adriana\dev\MVCApp\obj\Debug\net8.0\refint\MVCApp.dll
 C:\Users\adriana\dev\MVCApp\obj\Debug\net8.0\MVCApp.pdb
 C:\Users\adriana\dev\MVCApp\obj\Debug\net8.0\MVCApp.genruntimeconfig.cache
 C:\Users\adriana\dev\MVCApp\obj\Debug\net8.0\ref\MVCApp.dll
+c:\Users\adriana\dev\MVCApp\obj\Debug\net8.0\MVCApp.sourcelink.json
+C:\Users\adriana\dev\MVCApp\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\adriana\dev\MVCApp\obj\Debug\net8.0\MVCApp.csproj.AssemblyReference.cache
+C:\Users\adriana\dev\MVCApp\obj\Debug\net8.0\MVCApp.csproj.CopyComplete
+C:\Users\adriana\dev\MVCApp\bin\Debug\net8.0\Infrastructure\Persistence\users.json
