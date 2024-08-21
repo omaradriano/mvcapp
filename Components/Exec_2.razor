@@ -1,0 +1,34 @@
+@page "/Component-b"
+@using Services
+@inject SharedDataService SharedDataService
+
+<div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Code" aria-label="Code" aria-describedby="basic-addon1"
+        @oninput="@OnChange" value="@SharedDataService.Code">
+    <input class="form-control" type="text" value="@SharedDataService.Username with data @SharedDataService.Code" aria-label="readonly input example" readonly>
+</div>
+@code {
+
+    private async Task OnChange(ChangeEventArgs args)
+    {
+        SharedDataService.Code = args.Value.ToString();
+        @* await ValueChanged.InvokeAsync(title); *@
+    }
+
+    protected override void OnInitialized()
+    {
+        // Suscribirse al evento
+        SharedDataService.OnDataChanged += HandleDataChanged;
+    }
+
+    private void HandleDataChanged(object sender, EventArgs e)
+    {
+        InvokeAsync(StateHasChanged); // Actualiza el estado del componente
+    }
+
+    public void Dispose()
+    {
+        // Desuscribirse del evento
+        SharedDataService.OnDataChanged -= HandleDataChanged;
+    }
+}

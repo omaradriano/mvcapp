@@ -1,0 +1,7 @@
+@using MVCApp.Components;
+@namespace TestComponent
+
+@(await Html.RenderComponentAsync<Exec_1>(RenderMode.ServerPrerendered))  
+@(await Html.RenderComponentAsync<Exec_2>(RenderMode.ServerPrerendered))  
+@(await Html.RenderComponentAsync<Subscriptor_1>(RenderMode.ServerPrerendered))  
+    

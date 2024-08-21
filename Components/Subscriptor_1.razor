@@ -1,0 +1,31 @@
+@page "/component-b"
+@using Services
+@inject SharedDataService SharedDataService
+
+<p class="text-light">Shared Data: @SharedDataService.Username <i>with</i> @SharedDataService.Code</p>
+
+<div class="card">
+    <div class="card-header">@SharedDataService.Username</div>
+    <div class="card-body">
+        @SharedDataService.Code
+    </div>
+</div>
+
+@code {
+    protected override void OnInitialized()
+    {
+        // Suscribirse al evento
+        SharedDataService.OnDataChanged += HandleDataChanged;
+    }
+
+    private void HandleDataChanged(object sender, EventArgs e)
+    {
+        InvokeAsync(StateHasChanged); // Actualiza el estado del componente
+    }
+
+    public void Dispose()
+    {
+        // Desuscribirse del evento
+        SharedDataService.OnDataChanged -= HandleDataChanged;
+    }
+}

@@ -5,7 +5,7 @@ using MVCApp.Repository;
 namespace MVCApp.Controllers
 {
 
-    public class PkmnController : Controller
+    public class EventsController : Controller
     {
 
         public IActionResult Index()
@@ -13,7 +13,7 @@ namespace MVCApp.Controllers
             return View();
         }
 
-        [HttpPost("Pkmn/Test")]
+        [HttpPost("events/adduser")]
         public IActionResult Test(User user)
         {
             UsersJSONRepository.AddUser(user);

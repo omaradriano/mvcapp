@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\adriana\\dev\\MVCApp\\MVCApp.csproj": {}
+    "c:\\Users\\adriana\\dev\\MVCApp\\MVCApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\adriana\\dev\\MVCApp\\MVCApp.csproj": {
+    "c:\\Users\\adriana\\dev\\MVCApp\\MVCApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\adriana\\dev\\MVCApp\\MVCApp.csproj",
+        "projectUniqueName": "c:\\Users\\adriana\\dev\\MVCApp\\MVCApp.csproj",
         "projectName": "MVCApp",
-        "projectPath": "C:\\Users\\adriana\\dev\\MVCApp\\MVCApp.csproj",
+        "projectPath": "c:\\Users\\adriana\\dev\\MVCApp\\MVCApp.csproj",
         "packagesPath": "C:\\Users\\adriana\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\adriana\\dev\\MVCApp\\obj\\",
+        "outputPath": "c:\\Users\\adriana\\dev\\MVCApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\adriana\\AppData\\Roaming\\NuGet\\NuGet.Config",

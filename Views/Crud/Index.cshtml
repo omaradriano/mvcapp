@@ -14,6 +14,7 @@
                 <th scope="col">Username</th>
                 <th class="col-3" scope="col">Email</th>
                 <th class="col-2" scope="col"></th>
+                <th class="col-2" scope="col"></th>
             </tr>
         </thead>
         <tbody>
@@ -30,10 +31,17 @@
                         <td>@item.Username</td>
                         <td>@item.Email</td>
                         <td>
-                            <form asp-controller="Crud" asp-action="DeleteUser" asp-route-id="@item.Id" method="post" style="display:inline;">
+                            <form asp-controller="Crud" asp-action="deleteuser" asp-route-id="@item.Id" method="post" style="display:inline;">
                                 <input type="hidden" name="id" value="@item.Id" />
                                 <button type="submit" class="btn btn-danger" onclick="return confirm('¿Estás seguro de que deseas eliminar este usuario?');">Eliminar</button>
                             </form>
+                        </td>
+                        <td>
+                            @* <form asp-controller="Crud" asp-action="edituser" asp-route-id="@item.Id" method="get" style="display:inline;">
+                                <input type="hidden" name="id" value="@item.Id" />
+                                <button type="submit" class="btn btn-primary">Editar</button>
+                            </form> *@
+                            <a href=$"/crud/edituser/{@item.id}"></a>
                         </td>
                     </tr>
                 }
@@ -42,4 +50,4 @@
     </table>
 </div>
 
-<a class="btn bnt-link btn-outline-light mt-2" href="/Crud/AddUser/">Agregar usuario</a>
+<a class="btn bnt-link btn-outline-light mt-2" href="/crud/adduser/">Agregar usuario</a>

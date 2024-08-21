@@ -7,7 +7,7 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddServerSideBlazor(); //< -------- Configuracion agregada para los componentes blazor
 
-// builder.Services.AddSingleton<TestDataService>;
+builder.Services.AddSingleton<SharedDataService>();
 
 var app = builder.Build();
 

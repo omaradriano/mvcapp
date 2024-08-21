@@ -3,7 +3,6 @@ using MVCApp.Domain.Entities;
 
 namespace MVCApp.Repository
 {
-
     public static class UsersJSONRepository
     {
         private static string _FileName = "users.json";
@@ -23,9 +22,10 @@ namespace MVCApp.Repository
                 }
                 else
                 {
+                    int maxId;
                     string json = File.ReadAllText(_FilePath);
                     _data = JsonSerializer.Deserialize<List<User>>(json) ?? new List<User>();
-                    var maxId = _data.Max(x => x.Id + 1);
+                    _ = _data.Count == 0 ? maxId = 0 : maxId = _data.Max(x => x.Id + 1);
                     user.Id = maxId;
                     _data.Add(user);
 
@@ -61,26 +61,29 @@ namespace MVCApp.Repository
         {
             string json = File.ReadAllText(_FilePath);
             _data = JsonSerializer.Deserialize<List<User>>(json) ?? new List<User>();
-            if(_data.Count < 0){
+            if (_data.Count < 0)
+            {
                 return _data;
             }
             return _data;
         }
 
-        // public static User GetUserByID(int id)
-        // {
-        //     if (id <= 0 || id > _users.Max(x => x.Id)) System.Console.WriteLine("No existe el usuario");
-        //     return _users.FirstOrDefault(x => id == x.Id);
-        // }
+        public static User GetUserByID(int id)
+        {
+            string json = File.ReadAllText(_FilePath);
+            _data = JsonSerializer.Deserialize<List<User>>(json) ?? new List<User>();
+            if (id <= 0 || id > _data.Max(x => x.Id)) System.Console.WriteLine("No existe el usuario");
+            return _data.FirstOrDefault(x => id == x.Id);
+        }
 
-        // public static void EditUser(User user)
-        // {
-        //     if (user != null)
-        //     {
-        //         var userOnDB = _users.FirstOrDefault(x => x.Id == user.Id);
-        //         userOnDB = user;
-        //     }
-        // }
+        public static void EditUser(User user)
+        {
+            if (user != null)
+            {
+                var userOnDB = _data.FirstOrDefault(x => x.Id == user.Id);
+                userOnDB = user;
+            }
+        }
 
     }
 

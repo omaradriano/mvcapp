@@ -1,9 +1,0 @@
-@using MVCApp.Components;
-@namespace TestComponent
-
-<form asp-controller="Pkmn" asp-action="Test" method="post">
-    <input type="submit" class="btn btn-outline-success" value="Presionar boton test">
-</form>
-
-@(await Html.RenderComponentAsync<TestComponent>(RenderMode.ServerPrerendered))  
-    
